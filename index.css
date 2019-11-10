@@ -1,0 +1,14 @@
+.card, .btn, .form-control 
+{ 
+    margin-top: 5px;
+}
+
+.btn-secondary {
+    margin-bottom: 20px; 
+    margin-right: 400px;
+}
+
+.list-format
+{
+    font-size: larger;
+}
