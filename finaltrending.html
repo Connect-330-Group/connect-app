@@ -27,7 +27,7 @@
                 .attr("height", function(d) {  
                     return 15*(d+1);  
                 })
-                .attr("fill", "#a13a98")  
+                .attr("fill", "#5A6268")  
                 .attr("width", barWidth - barPadding) 
                 .attr("transform", function (d, i) {  
                     var translate = [barWidth * i, 0];  
@@ -51,9 +51,9 @@
                 .enter()
                 .append("text")
        // Add your code below this line
-                .attr("x", (d, i) => barWidth * i +11 )
+                .attr("x", (d, i) => barWidth * i +12 )
                 .attr("y", (d, i) => svgHeight - 15*(d.val+2)-3)
-                .attr("fill", "red")
+                .attr("fill", "white")
                 .text((d)=>d.val+1);
 
             
@@ -62,8 +62,8 @@
                 .attr("text-anchor", "end")
                 .attr("x", svgWidth)
                 .attr("y", svgHeight)
-                .attr("fill", "red")
-                .text("Bart___Jack__Sam__Joe_Emma_Dylan__Joon_Priya__Riya_Sonia_Jupyter");    
+                .attr("fill", "white")
+                .text("Bart_Jack_Sam_Joe__Ruth_Otto_Joon_Pun_Riya_Sam_Jim_");    
           </script>  
         </body>  
 </html>
