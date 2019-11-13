@@ -1,8 +1,9 @@
 .bar-chart {  
-    background-color: #e3cfe1;  
+    background-color: #6d757d;  
 }
 .title{
     position: relative;
     left: 90px;
+    color: #6d757d;
 
 }
