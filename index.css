@@ -8,6 +8,11 @@
     margin-right: 400px;
 }
 
+.btn-indx {
+  margin-bottom: 20px;
+  margin-right: 500px;
+}
+
 .list-format
 {
     font-size: larger;
@@ -24,7 +29,7 @@
   background-color: inherit;
 }
 
-.btnh
+.btn
 {
     margin-top: 5px;
     padding: 0.5em;
@@ -32,12 +37,9 @@
     background-color: #6d757d;
     font-size: larger;
     color: white;
+    width: 100%;
 }
 
-.btn-secondary_h {
-    margin-bottom: 20px;
-    margin-right: 800px;
-}
 .image h1{
     display: inline;
 }
