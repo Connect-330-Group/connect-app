@@ -65,6 +65,7 @@
   background-color: #5A6268;
 }
 
+<<<<<<< HEAD
 .back-button{
   position: relative;
   width: 80px;
@@ -73,3 +74,18 @@
   left: 130px;
 }
 
+=======
+#profile-img {
+  max-width: 100px;
+}
+
+#welcome-banner {
+  font-size: 30px;
+  padding: 20px 10px;
+}
+#viewprofile{
+  position: relative;
+  left: 120px;
+  bottom: 30px;
+}
+>>>>>>> d04f34e362a410b855631a8d7dcfb18a82b00bfe
