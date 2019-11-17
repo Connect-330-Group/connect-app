@@ -64,3 +64,17 @@
 .btnh:hover  {
   background-color: #5A6268;
 }
+
+#profile-img {
+  max-width: 100px;
+}
+
+#welcome-banner {
+  font-size: 30px;
+  padding: 20px 10px;
+}
+#viewprofile{
+  position: relative;
+  left: 120px;
+  bottom: 30px;
+}
