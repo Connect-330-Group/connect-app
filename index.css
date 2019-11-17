@@ -61,11 +61,6 @@
   padding: 0.5em;
 }
 
-.btnh:hover  {
-  background-color: #5A6268;
-}
-
-<<<<<<< HEAD
 .back-button{
   position: relative;
   width: 80px;
@@ -74,7 +69,10 @@
   left: 130px;
 }
 
-=======
+.btnh:hover  {
+  background-color: #5A6268;
+}
+
 #profile-img {
   max-width: 100px;
 }
@@ -88,4 +86,4 @@
   left: 120px;
   bottom: 30px;
 }
->>>>>>> d04f34e362a410b855631a8d7dcfb18a82b00bfe
+
