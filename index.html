@@ -1,7 +1,18 @@
 <html>
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="index.css">
+  <script>
+    $('#exampleModal').modal('toggle');
+  </script>
 </head>
 </body>
 <div class="jumbotron jumbotron-fluid">
@@ -12,9 +23,11 @@
         <img src="connect.png" alt="connect" align="right" width="100" height="100">
       </div>
       <div class="container">
-        <img src="profile.png" alt="user profile" id="profile-img">
-        <h1 id="welcome-banner" class="display-4">Welcome, Britt!</h1>
-        <p id="viewprofile"> View profile information</p>
+          <a href="profile.html" onclick="populateData()">
+            <img src="profile.png" alt="user profile" id="profile-img">
+            <h1 id="welcomeBanner" class="display-4">Welcome!</h1>
+            <p id="viewProfile">Login Below</p>
+          </a>
       </div>
       </div>
   </div>
@@ -24,12 +37,53 @@
     <div class="row">
           <div class="card">
             <div class="container">
-              <a href="activity.html"><button type="button" class="btn btn-secondary">Connect to Friends</button></a>
-              <a href="friends.html"><button type="button" class="btn btn-secondary">Recent Activity</button></a>
+              <a href="friends.html"><button type="button" class="btn btn-secondary">Connect to Friends</button></a>
+              <a href="activity.html"><button type="button" class="btn btn-secondary">Recent Activity</button></a>
               <a href="trends.html"><button type="button" class="btn btn-secondary">Trends</button></a>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="loginButton">
+                LOGIN
+              </button>
             </div>
         </div>
       </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Name</label>
+              <input type="password" class="form-control" id="inputName" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="submitLogin()">Sign In</button>
+          <script src="login.js"></script>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>

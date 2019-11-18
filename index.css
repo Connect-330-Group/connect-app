@@ -8,11 +8,6 @@
     margin-right: 400px;
 }
 
-.btn-indx {
-  margin-bottom: 20px;
-  margin-right: 500px;
-}
-
 .list-format
 {
     font-size: larger;
@@ -40,8 +35,8 @@
     width: 100%;
 }
 
-.image h1{
-    display: inline;
+.btn-group-vertical {
+  width: 100%;
 }
 
 .image2 h1{
@@ -62,11 +57,14 @@
 }
 
 .back-button{
-  position: relative;
-  width: 80px;
-  height: 80px;
-  top: 75px;
-  left: -130px;
+  width: 5%;
+  display: inline;
+  margin-bottom: 25px;
+}
+
+.page-title {
+  padding: 0% 1%;
+  display: inline-block;
 }
 
 .btnh:hover  {
@@ -77,17 +75,34 @@
   max-width: 100px;
 }
 
-#welcome-banner {
+#welcomeBanner {
   font-size: 30px;
   padding: 20px 10px;
+  display: inline;
 }
-#viewprofile{
+#viewProfile{
   position: relative;
-  left: 120px;
+  left: 115px;
   bottom: 30px;
+  text-align: left;
+}
+
+#loginButton {
+  background-color: #6600ff;
 }
 
 .back-button-text{
-  position: relative; 
+  position: relative;
+  padding: 10px;
 }
 
+
+
+a {
+  color: inherit;
+}
+/* Getting rid of link hover highlights */
+a:hover {
+ text-decoration: none;
+ color: #6600ff;
+}

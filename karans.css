@@ -1,9 +1,12 @@
-.bar-chart {  
-    background-color: #6d757d;  
+.bar-chart {
+    background-color: #F7F1FD;
 }
-.title{
+.title {
     position: relative;
     left: 90px;
     color: #6d757d;
+}
 
+.svg {
+  width: 75%;
 }
