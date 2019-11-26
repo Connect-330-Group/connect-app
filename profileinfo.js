@@ -18,13 +18,3 @@ function populateData () {
   console.log('temp name', temp)
   document.getElementById('displayName').innerHTML = temp;
 }
-
-// Update banner based on web storage:
-if (typeof(Storage) !== "undefined") {
-  // Retrieve from local storage
-  var temp = localStorage.getItem("myName");
-  console.log('temp', temp, typeof(temp));
-  if(temp !== "undefined") {
-    document.getElementById('welcomeBanner').innerHTML = 'Welcome, ' + temp + '!';
-  }
-}
