@@ -17,6 +17,7 @@ function populateData () {
   var temp = localStorage.getItem("myName");
   console.log('temp name', temp)
   document.getElementById('displayName').innerHTML = temp;
+  
 }
 
 // Update banner based on web storage:
@@ -24,7 +25,8 @@ if (typeof(Storage) !== "undefined") {
   // Retrieve from local storage
   var temp = localStorage.getItem("myName");
   console.log('temp', temp, typeof(temp));
-  if(temp !== "undefined") {
+  if(temp != null) {
     document.getElementById('welcomeBanner').innerHTML = 'Welcome, ' + temp + '!';
+    document.getElementById('viewProfile').innerHTML = 'View Profile';
   }
 }
