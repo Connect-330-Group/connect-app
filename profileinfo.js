@@ -22,3 +22,14 @@ function populateData () {
   document.getElementById('displayGender').innerHTML = temp3;
   }
 }
+function submitTime(){
+  temp=document.getElementById("timeAdd")
+  var happy = document.createElement("li")
+  var textNode=document.createTextNode(temp.value)
+  happy.appendChild(textNode)
+  var list= document.getElementById("listofTimes")
+  list.appendChild(textNode)
+  temp.value=""
+  tempee=document.getElementById('defaulttext')
+  tempee.innerHTML="Your listed times"
+}
