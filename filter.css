@@ -1,12 +1,10 @@
 .filterDiv {
   float: left;
-  background-color: #5A6268;
   color: #ffffff;
-  width: 100px;
   line-height: 40px;
   text-align: center;
-  margin: 2px;
   display: none;
+  width: 100%;
 }
 
 .show {
@@ -18,7 +16,6 @@
   overflow: hidden;
 }
 
-/* Style the buttons */
 .btnf {
   border: none;
   outline: none;
@@ -34,4 +31,12 @@
 .btnf.active {
   background-color: #6600ff;
   color: white;
+}
+
+.btnf:focus {
+  outline: none;
+}
+
+.friendlist {
+  padding: 5% 0%;
 }

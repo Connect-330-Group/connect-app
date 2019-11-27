@@ -2,6 +2,8 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="filter.css">
+  <script src="filters.js"></script>
 </head>
 </body>
 <div class="jumbotron jumbotron-fluid">
@@ -18,21 +20,35 @@
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
+              <div class="container">
+
                 <div class="form-group">
                     <label for="usr">Search:</label>
                     <input type="text" class="form-control" id="usr">
                 </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary btn-lg btn-block">John C.</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block">Kim K.</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block">Carl G.</button>
-                <button type="button" class="btn btn-secondary btn-lg btn-block">Britt L.</button>
+
+                <div id="myBtnContainer">
+                  <button class="btnf active" onclick="filterSelection('all')"> Show all</button>
+                  <button class="btnf" onclick="filterSelection('BFs')">Best Friends</button>
+                  <button class="btnf" onclick="filterSelection('Family')">Family</button>
+                  <button class="btnf" onclick="filterSelection('NTC')">Need to Call</button>
+                </div>
+                <div class ="friendlist">
+                  <div class="filterDiv BFs Family NTC" style="background-color:#6600ff">John C.</div>
+                  <div class="filterDiv BFs NTC">Kim K.</div>
+                  <div class="filterDiv BFs">Britt L.</div>
+                  <div class="filterDiv BFs NTC">Carl G.</div>
+                  <div class="filterDiv Family NTC">Mom</div>
+                </div>
+                <script src="filters.js"></script>
+
+
 
             </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
               <h3 class="card-title">John C.</h5>
@@ -44,7 +60,6 @@
               </ol>
             </div>
           </div>
-          <a href="filters.html"><button type="button" class="btn btn-secondary">See Contact Groups</button></a>
         </div>
       </div>
   </div>
