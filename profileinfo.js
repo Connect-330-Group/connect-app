@@ -1,20 +1,24 @@
-// var loggedIn = false;
-var loginName;
-function submitLogin () {
-  loginName = document.getElementById('inputName').value;
-  console.log(loginName);
-  document.getElementById('welcomeBanner').innerHTML = 'Welcome, ' + loginName + '!';
-  document.getElementById('viewProfile').innerHTML = 'View Profile';
-
-  // Check browser support
-  if (typeof(Storage) !== "undefined") {
-    // Store
-    localStorage.setItem("myName", loginName);
-  }
-}
 
 function populateData () {
   var temp = localStorage.getItem("myName");
-  console.log('temp name', temp)
-  document.getElementById('displayName').innerHTML = temp;
+  var temp1 = localStorage.getItem("myEmail");
+  var temp2 = localStorage.getItem("myAge");
+  var temp3 = localStorage.getItem("myGender");
+  if(temp!=null && document.getElementById('displayName')!=null)
+  {
+    document.getElementById('displayName').innerHTML = temp;
+  }
+  if(temp1!=null && document.getElementById('displayEmail')!=null)
+  {
+  document.getElementById('displayEmail').innerHTML = temp1;
+  }
+
+  if(temp2!=null && document.getElementById('displayAge')!=null)
+  {
+  document.getElementById('displayAge').innerHTML = temp2;
+  }
+  if(temp3!=null && document.getElementById('displayGender')!=null)
+  {
+  document.getElementById('displayGender').innerHTML = temp3;
+  }
 }
