@@ -122,6 +122,12 @@ a:hover {
   display: none;
 }
 
+.filterDiv.active
+{
+  background-color: #6600ff;
+  color: white;
+}
+
 .show {
   display: block;
 }
@@ -149,3 +155,13 @@ a:hover {
   background-color: #6600ff;
   color: white;
 }
+
+
+#ylabel {
+  position: relative;
+  float: left;
+  left: -145px;
+  transform: rotate(-90deg); 
+  top: -280px;
+}
+
