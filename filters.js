@@ -1,9 +1,11 @@
 availabilityList = [["2:00pm", "3:00pm", "6:00pm"],["8:00am", "1:00pm", "2:00pm"],["10:00am", "11:00am", "6:00pm","2:00pm"],["7:00am", "10:00am", "1:00pm"],["10:00am", "3:00am", "4:00pm","10:00pm"]]
 nameList = ["John C.","Kim K.", "Britt L.","Carl G.", "Mom"]
+contactedDateList = ["Last Contacted: 1 day ago", "Last Contacted: 1 week ago", "Last Contacted: 6 weeks ago", "Last Contacted: 2 hours ago", "Last Contacted: 3 weeks ago"]
 
 function SetID(id){
   console.log('this runs')
   document.getElementById("nameChange").innerHTML= nameList[id];
+  document.getElementById("lastTalked").innerHTML= contactedDateList[id];
   document.getElementById("timeinfo").innerHTML = "";
   for (var i = 0; i < 3; i++)
   {
