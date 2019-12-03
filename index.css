@@ -149,3 +149,13 @@ a:hover {
   background-color: #6600ff;
   color: white;
 }
+
+
+#ylabel {
+  position: relative;
+  float: left;
+  left: -145px;
+  transform: rotate(-90deg); 
+  top: -280px;
+}
+

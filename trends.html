@@ -14,67 +14,81 @@
     </div>
   </div>
   <div class="container">
-    <div class="title"> How Frequently You Talk to Your Top 8 Contacts</div>
-    <svg></svg>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script>
-    var svgWidth = 500;
-    var svgHeight = 305;
-    var svg = d3.select('svg')
-    .attr("width", svgWidth)
-    .attr("height", svgHeight)
-    .attr("class", "bar-chart");
-    var dataset = [8, 10, 5, 12, 8, 3, 4, 12, 1,1,0];
-    var barPadding = 5;
-    var barWidth = (svgWidth / dataset.length);
+    <div class= "card w-100"> 
+      <div class="card-body">
 
-    var barChart = svg.selectAll("rect")
-    .data(dataset)
-    .enter()
-    .append("rect")
-    .attr("y", function(d) {
-      return svgHeight - 15*(d+2)
-    })
-    .attr("height", function(d) {
-      return 15*(d+1);
-    })
-    .attr("fill", "#6E04FA")
-    .attr("width", barWidth - barPadding)
-    .attr("transform", function (d, i) {
-      var translate = [barWidth * i, 0];
-      return "translate("+ translate +")";
-    });
-    var dataset2=[
-      {"name":"Jack", "val": 8},
-      {"name":"Sam", "val": 10},
-      {"name":"Joey", "val": 5},
-      {"name":"Emma", "val": 12},
-      {"name":"Dylan", "val": 8},
-      {"name":"Joon", "val": 3},
-      {"name":"Priya", "val": 4},
-      {"name":"Rohan", "val": 12},
-      {"name":"Riya", "val": 1},
-      {"name":"Sonia", "val": 1},
-      {"name":"Jack", "val": 0}
-    ];
-    svg.selectAll("text")
-    .data(dataset2)
-    .enter()
-    .append("text")
-    // Add your code below this line
-    .attr("x", (d, i) => barWidth * i +11 )
-    .attr("y", (d, i) => svgHeight - 15*(d.val+2)-3)
-    .attr("fill", "black")
-    .text((d)=>d.val+1);
+                  <div class="title" style="position: relative; margin-left: 250px;padding-bottom: 20px;"> How Frequently You Talk to Your Top 8 Contacts</div>
+                  <svg style="align-content: center;"></svg>
+                  <script src="https://d3js.org/d3.v4.min.js"></script>
+                  <div id="ylabel"> Number of Times Contacted in Jan</div>
+                  </div>
+                  <script id="graphable">
+                  var svgWidth = 1050;
+                  var svgHeight = 550;
+                  var svg = d3.select('svg')
+                  .attr("width", svgWidth)
+                  .attr("height", svgHeight)
+                  .attr("class", "bar-chart");
+                  var dataset = [18, 21, 15, 22, 18, 13, 14, 22, 11,11,10];
+                  var barPadding = 5;
+                  var barWidth = (svgWidth / dataset.length);
 
-    svg.append("text")
-    .attr("class", "x label")
-    .attr("text-anchor", "end")
-    .attr("x", svgWidth)
-    .attr("y", svgHeight)
-    .attr("fill", "black")
-    .text("Bart___Jack__Sam__Joe_Emma_Dylan__Joon_Priya__Riya_Sonia_Jupyter");
-    </script>
+                  var barChart = svg.selectAll("rect")
+                  .data(dataset)
+                  .enter()
+                  .append("rect")
+                  .attr("y", function(d) {
+                    return svgHeight - 15*(d+3)
+                  })
+                  .attr("height", function(d) {
+                    return 15*(d+1.5);
+                  })
+                  .attr("fill", "#6E04FA")
+                  .attr("width", barWidth - barPadding)
+                  .attr("transform", function (d, i) {
+                    var translate = [barWidth * i, 0];
+                    return "translate("+ translate +")";
+                  });
+                  var dataset2=[
+                    {"name":"Kim K", "val": 18},
+                    {"name":"John C", "val": 21},
+                    {"name":"Britt L", "val": 15},
+                    {"name":"Mom", "val": 22},
+                    {"name":"Carl G", "val": 18},
+                    {"name":"Tom B", "val": 13},
+                    {"name":"Anant M", "val": 14},
+                    {"name":"Van C", "val": 22},
+                    {"name":"Dad", "val": 11},
+                    {"name":"Sonia", "val": 11},
+                    {"name":"Jack", "val": 10}
+                  ];
+                  svg.selectAll("text.vals")
+                  .data(dataset2)
+                  .enter()
+                  .append("text")
+                  // Add your code below this line
+                  .attr("x", (d, i) => (barWidth * i) + barWidth/2-10 )
+                  .attr("y", (d, i) => svgHeight - 15*(d.val+2)-16)
+                  .attr("fill", "black")
+                  .text((d)=>d.val+1)
+                  
+                  
+                  svg.selectAll("text.names")
+                  .data(dataset2)
+                  .enter()
+                  .append("text")
+                  .attr("x", (d, i) => barWidth*i+barWidth/2-27)
+                  .attr("y", (d, i) => svgHeight-5 )
+                  .attr("fill", "black")
+                  .text((d)=>d.name);
+
+                  </script>
+                
+
+                <div id="xlabel" style="position: relative; margin-left: 450px; top: -25px;">Name of Contact</div>
+    </div>
   </div>
+</div>
+
 </body>
 </html>
