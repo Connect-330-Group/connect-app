@@ -122,6 +122,12 @@ a:hover {
   display: none;
 }
 
+.filterDiv.active
+{
+  background-color: #6600ff;
+  color: white;
+}
+
 .show {
   display: block;
 }
