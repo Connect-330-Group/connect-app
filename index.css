@@ -160,7 +160,7 @@ a:hover {
 #ylabel {
   position: relative;
   float: left;
-  left: -145px;
+  left: -138px;
   transform: rotate(-90deg); 
   top: -280px;
 }
