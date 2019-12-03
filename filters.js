@@ -2,23 +2,26 @@ availabilityList = [["2:00pm", "3:00pm", "6:00pm"],["8:00am", "1:00pm", "2:00pm"
 nameList = ["John C.","Kim K.", "Britt L.","Carl G.", "Mom"]
 
 function SetID(id){
-  nameChange.innerHTML= nameList[id];
-  timeinfo.innerHTML = "";
+  console.log('this runs')
+  document.getElementById("nameChange").innerHTML= nameList[id];
+  document.getElementById("timeinfo").innerHTML = "";
   for (var i = 0; i < 3; i++)
   {
        time = "<li>" + availabilityList[id][i] + "</li>";
        timeinfo.innerHTML += time;
   }
+
   var friendContainer = document.getElementById("friendlistContainer");
   var f = friendContainer.getElementsByClassName("filterDiv");
+
+  // Go through and reset all to inactive
   for (var i = 0; i < f.length; i++) {
-    f[i].addEventListener("click", function(){
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-      console.log('new classname', this.className);
-    });
+    f[i].className = f[i].className.replace(" active", "");
+    console.log('new name classname', this.className);
   }
+
+  // Set only current to active
+  document.getElementById("f" + id).className += " active";
 }
 
 function filterSelection(c) {
@@ -62,11 +65,21 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
     console.log('new classname', this.className);
   });
-
-  function displayJohn(){
-
-  }
 }
+
+// var friendContainer = document.getElementById("friendlistContainer");
+// var f = friendContainer.getElementsByClassName("filterDiv");
+// console.log('f',f)
+// for (var i = 0; i < f.length; i++) {
+//   f[i].addEventListener("click", function(){
+//     var current = document.getElementsByClassName("active");
+//     console.log('current??', current)
+//     current[0].className = current[0].className.replace(" active", "");
+//     console.log('current after', current)
+//     this.className += " active";
+//     console.log('new name classname', this.className);
+//   });
+// }
 
 // Initialize
 filterSelection("all")

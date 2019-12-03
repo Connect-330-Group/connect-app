@@ -122,8 +122,7 @@ a:hover {
   display: none;
 }
 
-.filterDiv.active
-{
+.filterDiv.active {
   background-color: #6600ff;
   color: white;
 }
@@ -161,7 +160,6 @@ a:hover {
   position: relative;
   float: left;
   left: -138px;
-  transform: rotate(-90deg); 
+  transform: rotate(-90deg);
   top: -280px;
 }
-
