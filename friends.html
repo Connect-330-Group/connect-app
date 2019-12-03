@@ -34,12 +34,12 @@
                   <button class="btnf" onclick="filterSelection('NTC')">Need to Call</button>
                   <button class="btnf" onclick="filterSelection('CA')">Currently Available</button>
                 </div>
-                <div class ="friendlist">
-                  <div class="filterDiv BFs Family NTC" style="background-color:#6600ff">John C.</div>
-                  <div class="filterDiv CA BFs NTC">Kim K.</div>
-                  <div class="filterDiv BFs">Britt L.</div>
-                  <div class="filterDiv BFs NTC">Carl G.</div>
-                  <div class="filterDiv CA Family NTC">Mom</div>
+                <div id="friendlistContainer" class ="friendlist">
+                  <div class="filterDiv BFs Family NTC active" onclick="SetID(0)">John C.</div>
+                  <div class="filterDiv CA BFs NTC" onclick="SetID(1)">Kim K.</div>
+                  <div class="filterDiv BFs" onclick="SetID(2)">Britt L.</div>
+                  <div class="filterDiv BFs NTC" onclick="SetID(3)">Carl G.</div>
+                  <div class="filterDiv CA Family NTC" onclick="SetID(4)">Mom</div>
                 </div>
                 <script src="filters.js"></script>
 
@@ -52,12 +52,9 @@
         <div class="col-sm-4">
           <div class="card">
             <div class="card-body">
-              <h3 class="card-title">John C.</h5>
+              <h3 id='nameChange' class="card-title"></h5>
               <p class="card-text">Available at these times:</p>
-              <ol>
-              <li class="list-format">12:00pm</li>
-              <li class="list-format">2:00pm</li>
-              <li class="list-format">6:00pm</li>
+              <ol id='timeinfo'>
               </ol>
             </div>
           </div>
